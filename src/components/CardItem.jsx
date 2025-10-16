@@ -10,9 +10,7 @@ export default function CardItem({ id, title, price, description, category, imag
 
       <h3 className="text-lg font-semibold mb-2">R$ {price}</h3>
 
-      <Link to={`/produto/${id}`}> 
-        <button className="rounded-lg bg-amber-500 px-4 py-2 text-white font-semibold hover:bg-amber-600 transition">Ver detalhes</button>
-      </Link>
+      <Link to={`/produto/${id}`} className="px-4 py-2 rounded bg-amber-500 text-white">Ver detalhes</Link>
     </div>
   )
 }
