@@ -3,19 +3,17 @@ import Home from '../pages/Home'
 import Perfil from '../pages/Perfil'
 import Carrinho from '../pages/Carrinho' 
 import App from '../App' 
+import ProdutoDetalhe from '../pages/ProdutoDetalhe'
 
 const router = createBrowserRouter([
     {
         path:"/",
-        element: <App />,
-
-
+        element: <App />, 
         children:[
             {
                 index: true,
                 element: <Home />
             },
-
             {
                 path: "perfil",
                 element: <Perfil />
@@ -23,10 +21,13 @@ const router = createBrowserRouter([
             {
                 path: "carrinho",
                 element: <Carrinho />
+            },
+            {
+                path: "produto/:id",
+                element: <ProdutoDetalhe />
             }
         ]
     }
 ])
-
 
 export default router;
